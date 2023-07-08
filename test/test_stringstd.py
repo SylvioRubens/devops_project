@@ -1,5 +1,6 @@
 from stringstandardization import stringstd
 
+
 def test_full_name():
     name = 'Sylvio Rúbens'
     std_name = stringstd.standardize(name)
