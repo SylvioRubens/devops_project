@@ -14,13 +14,9 @@ on:
     types: [completed]
     branches:
       - 'main'
-    
-permissions:
-  contents: read
 
 jobs:
   on-success:
-
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
@@ -40,8 +36,8 @@ jobs:
       with:
         user: ${{ secrets.PYPI_USERNAME }}
         password: ${{ secrets.PYPI_PASSWORD }}
-
-   on-failure:
+        
+  on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
