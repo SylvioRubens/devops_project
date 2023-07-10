@@ -19,10 +19,10 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
+  on-success:
 
     runs-on: ubuntu-latest
-
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
@@ -40,3 +40,9 @@ jobs:
       with:
         user: ${{ secrets.PYPI_USERNAME }}
         password: ${{ secrets.PYPI_PASSWORD }}
+
+   on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo 'O workflow "Python Package CI" falhou!!. Abortando o deploy...'
