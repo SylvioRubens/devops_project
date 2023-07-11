@@ -24,6 +24,6 @@ def test_multiply():
     assert calc.multiply(a=5, b=3) == 15
 
 
-# def test_divide():
-#     calc = calculator.cal()
-#     assert calc.divide(a=5, b=2) == 2.5
+def test_divide():
+    calc = calculator.cal()
+    assert calc.divide(a=5, b=2) == 2.5

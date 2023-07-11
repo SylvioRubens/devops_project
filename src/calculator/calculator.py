@@ -28,9 +28,9 @@ class cal():
         b = float(b)
         return a * b
 
-    # def divide(self, a, b):
-    #     self.checking_consistence(a)
-    #     self.checking_consistence(b)
-    #     a = float(a)
-    #     b = float(b)
-    #     return a / b
+    def divide(self, a, b):
+        self.checking_consistence(a)
+        self.checking_consistence(b)
+        a = float(a)
+        b = float(b)
+        return a / b
