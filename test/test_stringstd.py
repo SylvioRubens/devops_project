@@ -19,9 +19,9 @@ def test_sub():
     assert calc.sub(a=5, b=3) == 2
 
 
-# def test_multiply():
-#     calc = calculator.cal()
-#     assert calc.multiply(a=5, b=3) == 15
+def test_multiply():
+    calc = calculator.cal()
+    assert calc.multiply(a=5, b=3) == 15
 
 
 def test_divide():
